@@ -2,8 +2,10 @@
   "name": "sarkari-tender-backend",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "start": "node dist/server.js",
+ "scripts": {
+    "build": "npm install && tsc",
+    "start": "ts-node src/server.ts",
+    "prod": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
