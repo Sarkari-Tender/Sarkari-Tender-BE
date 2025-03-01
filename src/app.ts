@@ -9,6 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Routes
 app.use("/tenders", tenderRoutes);
 app.use("/corrigendums", corrigendumRoutes);
 app.use(errorHandler);
