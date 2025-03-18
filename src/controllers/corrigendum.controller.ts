@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { fetchCorrigendum } from "../services/corrigendum.service";
+import { fetchCorrigendum, fetchCorrigendumById } from "../services/corrigendum.service";
 
 export const getCorrigendum = async (req: Request, res: Response) => {
     try{
@@ -10,3 +10,10 @@ export const getCorrigendum = async (req: Request, res: Response) => {
     }
     
 };
+
+export const getCorrigendumByTenderId =async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const corrigendum = await fetchCorrigendumById(id);
+    res.json(corrigendum)
+
+}

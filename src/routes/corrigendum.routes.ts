@@ -1,8 +1,9 @@
 import express from "express";
-import { getCorrigendum } from "../controllers/corrigendum.controller"
+import { getCorrigendum, getCorrigendumByTenderId } from "../controllers/corrigendum.controller"
 
 const router = express.Router();
 
 router.get("/" , getCorrigendum);
+router.get("/:id" , getCorrigendumByTenderId);
 
 export default router;
